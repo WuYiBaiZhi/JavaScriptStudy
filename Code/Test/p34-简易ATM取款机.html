@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let money = 100 // 初始化金钱
+        while(true){
+            let flag = prompt(`请选择您的操作:
+            1.存钱
+            2.取钱
+            3.余额
+            4.退出`);
+            if(flag == "4") {
+                document.write("运行完成!")
+                break
+            }
+            switch(flag){
+                case '1' : {
+                    money += (+prompt("请输入要存入的金额/元"));
+                    break;
+                }
+                case '2' : {
+                    money -= (+prompt("请输入要取出的金额/元"));
+                    break;
+                }
+                case '3' : {
+                    alert(`余额为${money}元`);
+                    break;
+                }
+                default : alert("没有这个选择")
+            }
+        }
+        
+    </script>
+</body>
+</html>
